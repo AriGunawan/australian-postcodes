@@ -1,0 +1,37 @@
+{
+  "name": "australian-post-codes",
+  "version": "0.0.1",
+  "description": "Application for search suburb area on a Google map based on name or postcode",
+  "main": "app.js",
+  "author": "Ari Gunawan",
+  "license": "ISC",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "flux": "^2.1.1",
+    "jquery": "^2.2.3",
+    "keymirror": "^0.1.1",
+    "object-assign": "^4.1.0",
+    "react": "^15.0.2",
+    "react-autosuggest": "^3.7.3",
+    "react-bootstrap": "^0.29.4",
+    "react-dom": "^15.0.2"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "envify": "^3.4.0",
+    "gmaps": "^0.4.24",
+    "reactify": "^1.1.1",
+    "uglify": "^0.1.5",
+    "watchify": "^3.7.0"
+  },
+  "scripts": {
+    "start": "watchify -o js/bundle.js -v -d js/app.js",
+    "build": "browserify . -t [envify --NODE_ENV production] | uglify -cm > js/bundle.min.js"
+  },
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+#postcode_boundary_map {
+  width: 80%;
+  height: 400px;
+  position: relative;
+  float: right;
+}
+
+/* Map styles. */
+#map-container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
+}
+
+#map-holder {
+  height: 100%;
+  width: 100%;
+}
+
+/* Input styles. */
+#postcode_boundary.invalid {
+  background-color: #FAC6C0;
+}
